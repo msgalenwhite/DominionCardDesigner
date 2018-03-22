@@ -24,15 +24,28 @@ def find_user_name
   JSON.parse(File.read('userName.json'))
 end
 
+def find_card(id)
+  deck = load_deck
+  deck["cards"].each do |card|
+    if card["id"] === id.to_i
+      return card
+    end
+  end
+end
+
 # API ENDPOINTS
-get "/api/v1/cards/:specific_card" do
-  card_info = params["specific_card"]
+### GET ROUTES
+get "/api/v1/cards/:card_id" do
+  target_id = params["card_id"]
+  cardData = find_card(target_id)
+
+  content_type :json
+  json cardData
 end
 
 get "/api/v1/cards" do
   deck = load_deck
 
-  # what is content_type?
   content_type :json
   json deck
 end
@@ -44,14 +57,12 @@ get "/api/v1/userName" do
   json userName
 end
 
+### POST ROUTES
 post "/api/v1/cards" do
 
   current_deck = load_deck
-
   card = JSON.parse(request.body.read)
-
   card['id'] = current_deck['cards'].last['id'] + 1
-
   current_deck['cards'] << card
 
   File.write('cards.json', JSON.pretty_generate(current_deck))
@@ -64,9 +75,7 @@ end
 post "/api/v1/userName" do
 
   userNameObj = find_user_name
-
   userNameObj["userName"] = JSON.parse(request.body.read)
-
   File.write('userName.json', JSON.pretty_generate(userNameObj))
 
   content_type :json
@@ -76,9 +85,7 @@ end
 
 post "/api/v1/eraseUserName" do
   userNameObj = find_user_name
-
   userNameObj["userName"] = ""
-
   File.write('userName.json', JSON.pretty_generate(userNameObj))
 
   content_type :json

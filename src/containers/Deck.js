@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 import Card from '../components/Card'
 
@@ -7,7 +8,9 @@ const Deck = props => {
   let displayDeck = props.cardData.map((indivCard) => {
     return (
       <span className='cardInDeck' key={indivCard.id}>
-        <a href="/api/v1/cards/:specific_card">
+        <Link
+          to={`/cardapp/singlecard/${indivCard.id}`}
+        >
           <Card
             cardName={indivCard.cardName}
             cardText={indivCard.cardText}
@@ -17,7 +20,7 @@ const Deck = props => {
             type={indivCard.type}
             id={indivCard.id}
           />
-        </a>
+        </Link>
       </span>
     )
   })

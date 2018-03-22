@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import CardDesignPage from './pages/CardDesignPage'
 import HomePage from './pages/HomePage'
 import ViewDeckPage from './pages/ViewDeckPage'
+import SingleCardPage from './pages/SingleCard'
 
 import './main.scss'
 
@@ -97,6 +98,10 @@ const App = props => {
         <Route
           path='/cardapp/yourdeck'
           component={ViewDeckPage}
+        />
+        <Route
+          path={`/cardapp/singlecard/:id`}
+          component={SingleCardPage}
         />
       </Route>
     </Router>
