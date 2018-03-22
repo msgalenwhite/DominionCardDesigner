@@ -2,8 +2,6 @@ import React from 'react'
 import cardImages from '../constants/CardImages'
 
 const Card = (props) => {
-  debugger
-
   let tags = {
     title: 'cardTitleDiv',
     pic: 'displayCardImage',
