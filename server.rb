@@ -25,6 +25,10 @@ def find_user_name
 end
 
 # API ENDPOINTS
+get "/api/v1/cards/:specific_card" do
+  card_info = params["specific_card"]
+end
+
 get "/api/v1/cards" do
   deck = load_deck
 

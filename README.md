@@ -64,3 +64,5 @@ CHANGES TO VERIFY PAGE
 NEW THINGS TO LEAN:
  - Jest
     - learn and write tests
+
+WORKING ON: links to specific cards
