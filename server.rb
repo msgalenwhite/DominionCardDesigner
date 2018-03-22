@@ -28,7 +28,7 @@ def find_card(id)
   deck = load_deck
   deck["cards"].each do |card|
     if card["id"] === id.to_i
-      return JSON.generate(card)
+      return card
     end
   end
 end
@@ -61,11 +61,8 @@ end
 post "/api/v1/cards" do
 
   current_deck = load_deck
-
   card = JSON.parse(request.body.read)
-
   card['id'] = current_deck['cards'].last['id'] + 1
-
   current_deck['cards'] << card
 
   File.write('cards.json', JSON.pretty_generate(current_deck))
@@ -78,9 +75,7 @@ end
 post "/api/v1/userName" do
 
   userNameObj = find_user_name
-
   userNameObj["userName"] = JSON.parse(request.body.read)
-
   File.write('userName.json', JSON.pretty_generate(userNameObj))
 
   content_type :json
@@ -90,9 +85,7 @@ end
 
 post "/api/v1/eraseUserName" do
   userNameObj = find_user_name
-
   userNameObj["userName"] = ""
-
   File.write('userName.json', JSON.pretty_generate(userNameObj))
 
   content_type :json

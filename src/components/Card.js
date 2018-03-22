@@ -1,7 +1,8 @@
 import React from 'react'
-import CardImages from "../constants/CardImages"
+import cardImages from '../constants/CardImages'
 
 const Card = (props) => {
+  debugger
 
   let tags = {
     title: 'cardTitleDiv',
@@ -20,8 +21,7 @@ const Card = (props) => {
     potions = <img className={tags.potions}
     src='http://wiki.dominionstrategy.com/images/7/7a/Potion.png' />
   }
-
-  let typePic = CardImages[props.type].url
+  let typePic = cardImages[props.type].url
 
   return (
     <div className='cardDiv'>

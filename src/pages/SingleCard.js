@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 
+import Card from '../components/Card'
+
 class SingleCardPage extends Component {
   constructor(props){
     super(props);
     this.state = {
+      fetchComplete: false
     }
   }
 
@@ -21,16 +24,55 @@ class SingleCardPage extends Component {
           throw(error);
         }
       })
-      .then ( response => response.json() )
+      .then ( response => response.text())
+      .then ( response => JSON.parse(response))
       .then ( response => {
-        console.log(response)
+        this.setState({
+          cardName: response.cardName,
+          cardText: response.cardText,
+          cardCost: response.cardCost,
+          cardImageUrl: response.cardImageUrl,
+          potions: response.potions,
+          type: response.type,
+          id: response.id,
+          extraInfo: response.extraInfo,
+          fetchComplete: true
+        })
       })
-      .catch ( error => console.error(`Error in fetch: ${error.message}`) );
+      .catch ( error => console.error(`Error in fetch: ${error.message}`))
   }
 
   render() {
+    let singleCard;
+    let cardNotes;
+
+    if (this.state.fetchComplete){
+      singleCard =
+        <span className='cardInDeck'>
+          <Card
+            cardName={this.state.cardName}
+            cardText={this.state.cardText}
+            cardCost={this.state.cardCost}
+            cardImageUrl={this.state.cardImageUrl}
+            potions={this.state.potions}
+            type={this.state.type}
+            id={this.state.id}
+          />
+        </span>
+
+      cardNotes =
+        <div>
+          <p>
+            {this.state.extraInfo}
+          </p>
+        </div>
+    }
+
     return(
-      <h1>CARD</h1>
+      <div>
+        {singleCard}
+        {cardNotes}
+      </div>
     )
   }
 }
