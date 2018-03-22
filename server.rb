@@ -24,28 +24,28 @@ def find_user_name
   JSON.parse(File.read('userName.json'))
 end
 
+def find_card(id)
+  deck = load_deck
+  deck["cards"].each do |card|
+    if card["id"] === id.to_i
+      return JSON.generate(card)
+    end
+  end
+end
+
 # API ENDPOINTS
-# get "/api/v1/cards/:card_id" do
-#   require "pry"
-#   binding.pry
-#   target_id = params["card_id"]
-#
-#   current_deck = load_deck["cards"]
-#   current_deck.forEach((card) => {
-#
-#   })
-#
-#   redirect "/api/v1/yourCard"
-# end
-#
-# get "/api/v1/yourCard" do
-#
-# end
+### GET ROUTES
+get "/api/v1/cards/:card_id" do
+  target_id = params["card_id"]
+  cardData = find_card(target_id)
+
+  content_type :json
+  json cardData
+end
 
 get "/api/v1/cards" do
   deck = load_deck
 
-  # what is content_type?
   content_type :json
   json deck
 end
@@ -57,6 +57,7 @@ get "/api/v1/userName" do
   json userName
 end
 
+### POST ROUTES
 post "/api/v1/cards" do
 
   current_deck = load_deck

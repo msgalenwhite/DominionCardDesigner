@@ -1,23 +1,38 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-const SingleCardPage = props => {
+class SingleCardPage extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+    }
+  }
 
-  render(
-    <h1>Single Card Page</h1>
-  )
-// const SingleCardPage = ({body, title}) => `
-// <!DOCTYPE html>
-// <html>
-//   <head>
-//     <title>${title}</title>
-//   </head>
-//   <body class='page'>
-//     div id='targetApp'>${body}</body>
-//   </body>
-// </html>
-//
-//
-// `;
+  componentDidMount() {
+    let cardId = this.props.routeParams.id
+    let fetchUrl = `/api/v1/cards/${cardId}`
 
+    fetch(fetchUrl)
+      .then ( response => {
+        if ( response.ok ) {
+          return response;
+        } else {
+          let errorMessage = `${response.status} (${response.statusText})`;
+          let error = new Error(errorMessage);
+          throw(error);
+        }
+      })
+      .then ( response => response.json() )
+      .then ( response => {
+        console.log(response)
+      })
+      .catch ( error => console.error(`Error in fetch: ${error.message}`) );
+  }
+
+  render() {
+    return(
+      <h1>CARD</h1>
+    )
+  }
 }
-export default SingleCardPage;
+
+export default SingleCardPage

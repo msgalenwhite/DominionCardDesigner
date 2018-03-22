@@ -100,8 +100,8 @@ const App = props => {
           component={ViewDeckPage}
         />
         <Route
-          path='/cardapp/singlecard/:id'
-          handler={SingleCardPage}
+          path={`/cardapp/singlecard/:id`}
+          component={SingleCardPage}
         />
       </Route>
     </Router>

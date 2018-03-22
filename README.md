@@ -65,4 +65,6 @@ NEW THINGS TO LEAN:
  - Jest
     - learn and write tests
 
-WORKING ON: links to specific cards
+Cool things for the future:
+- links to specific cards
+- save miniature decks to use in conjunction with each other
