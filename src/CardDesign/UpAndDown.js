@@ -12,7 +12,10 @@ const UpAndDown = props => {
         <i className="fa fa-arrow-circle-left"></i>
         <input
           type='text'
+          name={props.label}
           defaultValue='10'
+          max='10'
+          min="-5"
         />
         <i className="fa fa-arrow-circle-right"></i>
       </div>

@@ -10,7 +10,6 @@ import CardImages from '../constants/CardImages'
 const DesignContainer = props => {
 
   let labelObject = {
-    cardName: "Name:",
     cardText: "Text:",
     cardCost: "Cost:",
     cardImageUrl: "Image URL:",
@@ -54,10 +53,17 @@ const DesignContainer = props => {
         options={typeOptions}
         handleClick={props.handleDropDownClick}
       />
+      <TextInputField
+        onChange={props.handleValueChange}
+        value={props.cardData['cardName']}
+        name="cardName"
+        label="Name:"
+        key="Name:"
+      />
+      <CardDescriptionDesign />
 
       {textInputs}
 
-      <CardDescriptionDesign />
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>
