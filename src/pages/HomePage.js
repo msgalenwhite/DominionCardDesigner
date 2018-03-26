@@ -3,8 +3,6 @@ import React, {Component} from 'react'
 import NameContainer from '../containers/NameContainer'
 import WelcomeContainer from '../containers/WelcomeContainer'
 
-
-
 class HomePage extends Component {
   constructor(props){
     super(props);
