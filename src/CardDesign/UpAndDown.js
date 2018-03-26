@@ -6,6 +6,8 @@ const UpAndDown = props => {
 
   return(
     <div className="upAndDown">
+      <label className="upDownLabel">{props.label}</label>
+      <br/>
       <div className='flexboxDiv'>
         <i className="fa fa-arrow-circle-left"></i>
         <input

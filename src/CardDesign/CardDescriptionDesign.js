@@ -10,6 +10,7 @@ const CardDescriptionDesign = props => {
     return (
       <UpAndDown
         key={index}
+        label={label}
       />
     )
   })
