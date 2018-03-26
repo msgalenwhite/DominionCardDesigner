@@ -38,7 +38,6 @@ UP AND DOWN
   .fa:hover {
     color: $light-blue;
   }
-
 }
 .flexboxDiv input {
   width: 40px;
@@ -47,4 +46,13 @@ UP AND DOWN
   border: none;
   text-align: center;
   font-weight: bold;
+  font-size: 1em;
+}
+.upAndDown {
+  margin: 15px;
+}
+.upAndDownGroup {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
 }

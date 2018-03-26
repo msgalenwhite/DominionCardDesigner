@@ -11,7 +11,6 @@ const UpAndDown = props => {
         <input
           type='text'
           defaultValue='10'
-          className='upAndDownText'
         />
         <i className="fa fa-arrow-circle-right"></i>
       </div>

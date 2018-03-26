@@ -4,8 +4,20 @@ import UpAndDown from './UpAndDown'
 
 const CardDescriptionDesign = props => {
 
-  return(
+  let portions = ["Actions", "Cards", "Buys"]
 
+  let upAndDownArray = portions.map((label, index) => {
+    return (
+      <UpAndDown
+        key={index}
+      />
+    )
+  })
+
+  return(
+    <div className='upAndDownGroup'>
+      {upAndDownArray}
+    </div>
   )
 }
 

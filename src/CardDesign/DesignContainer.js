@@ -4,7 +4,7 @@ import DropDown from '../components/DropDown'
 import TextInputField from '../components/TextInputField'
 import SubmitButton from '../components/SubmitButton'
 import UpAndDown from './UpAndDown'
-
+import CardDescriptionDesign from './CardDescriptionDesign'
 import CardImages from '../constants/CardImages'
 
 const DesignContainer = props => {
@@ -57,7 +57,7 @@ const DesignContainer = props => {
 
       {textInputs}
 
-      <UpAndDown />
+      <CardDescriptionDesign />
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>
