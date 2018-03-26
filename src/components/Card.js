@@ -1,5 +1,6 @@
 import React from 'react'
 import cardImages from '../constants/CardImages'
+import CardDescription from './CardDescription'
 
 const Card = (props) => {
   let tags = {
@@ -32,9 +33,10 @@ const Card = (props) => {
           src = {props.cardImageUrl}
         />
       </div>
-      <div className={tags.text}>
-        {props.cardText}
-      </div>
+      <CardDescription
+        divTag={tags.text}
+        content={props.cardText}
+      />
       <div className={tags.cost} >
         {props.cardCost}
       </div>
