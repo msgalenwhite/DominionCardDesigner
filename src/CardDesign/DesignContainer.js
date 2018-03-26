@@ -3,7 +3,7 @@ import React from 'react';
 import DropDown from '../components/DropDown'
 import TextInputField from '../components/TextInputField'
 import SubmitButton from '../components/SubmitButton'
-import UpAndDown from '../components/UpAndDown'
+import UpAndDown from './UpAndDown'
 
 import CardImages from '../constants/CardImages'
 
@@ -57,6 +57,7 @@ const DesignContainer = props => {
 
       {textInputs}
 
+      <UpAndDown />
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>

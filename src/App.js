@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Router, Route, Redirect, IndexRoute, browserHistory } from 'react-router'
 
 import NavBar from './components/NavBar'
+import CardDesignPage from './CardDesign/CardDesignPage'
 
-import CardDesignPage from './pages/CardDesignPage'
 import HomePage from './pages/HomePage'
 import ViewDeckPage from './pages/ViewDeckPage'
 import SingleCardPage from './pages/SingleCard'

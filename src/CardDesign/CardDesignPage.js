@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
-import DesignContainer from '../containers/DesignContainer'
-import VerifyCard from '../containers/VerifyCard'
+import DesignContainer from './DesignContainer'
+import VerifyCard from './VerifyCard'
 
 import ErrorMessages from '../constants/ErrorMessages'
 import CardImages from '../constants/CardImages'
