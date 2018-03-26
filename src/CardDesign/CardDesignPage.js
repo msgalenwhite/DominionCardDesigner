@@ -14,6 +14,9 @@ class CardDesignPage extends Component {
     super(props);
     this.state = {
       cardName: '',
+      cardActions: '',
+      cardDraws: '',
+      cardBuys: '',
       cardText: '',
       cardCost: '',
       cardImageUrl: '',
@@ -37,7 +40,6 @@ class CardDesignPage extends Component {
   }
 
   handleValueChange(event) {
-
     let newValue = event.target.value;
     let target = event.target.className;
 
@@ -51,6 +53,9 @@ class CardDesignPage extends Component {
 
     let formPayload = {
       cardName: this.state.cardName,
+      cardActions: this.state.cardActions,
+      cardDraws: this.state.cardDraws,
+      cardBuys: this.state.cardBuys,
       cardText: this.state.cardText,
       cardCost: this.state.cardCost,
       cardImageUrl: this.state.cardImageUrl,
@@ -90,6 +95,9 @@ class CardDesignPage extends Component {
   handleClearForm() {
     this.setState({
       cardName: '',
+      cardActions: '',
+      cardDraws: '',
+      cardBuys: '',
       cardText: '',
       cardCost: '',
       cardImageUrl: '',
@@ -137,12 +145,15 @@ class CardDesignPage extends Component {
   handleAddToJSON(){
     let formPayload = {
       cardName: this.state.cardName,
+      cardActions: this.state.cardActions,
+      cardDraws: this.state.cardDraws,
+      cardBuys: this.state.cardBuys,
       cardText: this.state.cardText,
       cardCost: this.state.cardCost,
       cardImageUrl: this.state.cardImageUrl,
       potions: this.state.potions,
       type: this.state.type,
-      extraInfo: ''
+      extraInfo: this.state.extraInfo
     }
 
     this.handleClearForm()
@@ -173,6 +184,9 @@ class CardDesignPage extends Component {
       <span className="verifyCard">
         <Card
           cardName={this.state.cardName}
+          cardActions={this.state.cardActions}
+          cardBuys={this.state.cardBuys}
+          cardDraws={this.state.cardDraws}
           cardText={this.state.cardText}
           cardCost={this.state.cardCost}
           cardImageUrl={image}

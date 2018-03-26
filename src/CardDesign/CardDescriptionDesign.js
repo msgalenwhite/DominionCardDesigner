@@ -4,13 +4,24 @@ import UpAndDown from './UpAndDown'
 
 const CardDescriptionDesign = props => {
 
-  let portions = ["Actions", "Cards", "Buys"]
+  let portions = {
+    cardActions: "Actions",
+    cardDraws: "Cards",
+    cardBuys: "Buys"
+  }
 
-  let upAndDownArray = portions.map((label, index) => {
+  let upAndDownArray = Object.entries(portions).map((miniArray) => {
+    let label = miniArray[1]
+    let name = miniArray[0]
+    let value = props[name]
+
     return (
       <UpAndDown
-        key={index}
+        key={label}
         label={label}
+        value={value}
+        name={name}
+        onChange={props.onChange}
       />
     )
   })

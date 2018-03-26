@@ -3,45 +3,19 @@ import React from 'react';
 import DropDown from '../components/DropDown'
 import TextInputField from '../components/TextInputField'
 import SubmitButton from '../components/SubmitButton'
-import UpAndDown from './UpAndDown'
 import CardDescriptionDesign from './CardDescriptionDesign'
 import CardImages from '../constants/CardImages'
+import UpAndDown from './UpAndDown'
 
 const DesignContainer = props => {
-
-  let labelObject = {
-    cardText: "Text:",
-    cardCost: "Cost:",
-    cardImageUrl: "Image URL:",
-    type: "What type of card would you like?"
-  }
-
-  let textInputs = Object.entries(labelObject).map((miniArray) => {
-    let fieldName = miniArray[0]
-    let fieldLabel = miniArray[1]
-    let fieldValue = props.cardData[fieldName]
-
-    if (fieldName !== "type") {
-      return (
-        <TextInputField
-          onChange={props.handleValueChange}
-          value={fieldValue}
-          name={fieldName}
-          label={fieldLabel}
-          key={fieldLabel}
-        />
-      )
-    }
-  })
 
   let typeOptions = Object.values(CardImages).map((valueObject) => {
     return valueObject.label
   })
 
-
   return(
     <form
-      className="designForm"
+      className={props.className}
       onSubmit={props.handleFormSubmit}
     >
       <div className="genericError">
@@ -49,21 +23,42 @@ const DesignContainer = props => {
       </div>
       <DropDown
         className="typeDropDown"
-        label={labelObject.type}
+        label="What type of card would you like?"
         options={typeOptions}
         handleClick={props.handleDropDownClick}
       />
+      <CardDescriptionDesign
+        cardActions={props.cardData['cardActions']}
+        cardDraws={props.cardData['cardDraws']}
+        cardBuys={props.cardData['cardBuys']}
+        onChange={props.handleValueChange}
+      />
+      <div className='textInput'>
+        <h6 className="error">{props.errorMessage}</h6>
+        <label className='cardText'>
+          Additional CardText:
+          <textarea
+            className={props.name}
+            value={props.cardData['cardText']}
+            onChange={props.handleValueChange}
+          />
+        </label>
+      </div>
+      <UpAndDown
+        key='cardCost'
+        label='Cost:'
+        value={props.cardData['cardCost']}
+        name='cardCost'
+        onChange={props.handleValueChange}
+      />
       <TextInputField
         onChange={props.handleValueChange}
-        value={props.cardData['cardName']}
-        name="cardName"
-        label="Name:"
-        key="Name:"
+        value={props.cardData['cardImageUrl']}
+        name='cardImageUrl'
+        label='Image Url: '
+        key='cardImageUrl'
+        inputType='text'
       />
-      <CardDescriptionDesign />
-
-      {textInputs}
-
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>

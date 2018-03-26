@@ -8,7 +8,7 @@ const TextInputField = props => {
       <label className={props.name}>
         {props.label}
         <input
-          type="text"
+          type={props.inputType}
           className={props.name}
           value={props.value}
           onChange={props.onChange}
