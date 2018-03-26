@@ -27,11 +27,13 @@ $ npm start
 Navigate to `localhost:4567`.
 
 ## To-Do:
+CHANGES TO DESIGN CONTAINER:
+  - functions to make up and down buttons change values
 
 CHANGES TO SCSS:
   - For Card display:
     - Change px to %
-  - Incorporate UP-AND-Down
+  - Fix spacing in Design Container
 
 CHANGES TO DECK CONTAINER:
 X- Clicking on a single card will take you to its page
