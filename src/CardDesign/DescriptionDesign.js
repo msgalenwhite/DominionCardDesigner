@@ -2,7 +2,7 @@ import React from 'react'
 
 import UpAndDown from './UpAndDown'
 
-const CardDescriptionDesign = props => {
+const DescriptionDesign = props => {
 
   let portions = {
     cardActions: "Actions",
@@ -22,6 +22,8 @@ const CardDescriptionDesign = props => {
         value={value}
         name={name}
         onChange={props.onChange}
+        increaseByOne={props.increaseByOne}
+        decreaseByOne={props.decreaseByOne}
       />
     )
   })
@@ -33,4 +35,4 @@ const CardDescriptionDesign = props => {
   )
 }
 
-export default CardDescriptionDesign
+export default DescriptionDesign

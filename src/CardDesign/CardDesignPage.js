@@ -14,11 +14,11 @@ class CardDesignPage extends Component {
     super(props);
     this.state = {
       cardName: '',
-      cardActions: '',
-      cardDraws: '',
-      cardBuys: '',
+      cardActions: 0,
+      cardDraws: 0,
+      cardBuys: 0,
       cardText: '',
-      cardCost: '',
+      cardCost: 0,
       cardImageUrl: '',
       potions:'',
       type: '',
@@ -29,6 +29,8 @@ class CardDesignPage extends Component {
     }
 
     this.handleValueChange = this.handleValueChange.bind(this);
+    this.increaseByOne = this.increaseByOne.bind(this)
+    this.decreaseByOne = this.decreaseByOne.bind(this)
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handlePotionSelect = this.handlePotionSelect.bind(this);
@@ -45,6 +47,22 @@ class CardDesignPage extends Component {
 
     this.setState({
       [target]: newValue
+    })
+  }
+
+  increaseByOne(target) {
+    let amount = parseInt(this.state[target]) + 1
+
+    this.setState({
+      [target]: amount
+    })
+  }
+
+  decreaseByOne(target) {
+    let amount = parseInt(this.state[target]) - 1
+
+    this.setState({
+      [target]: amount
     })
   }
 
@@ -223,6 +241,8 @@ class CardDesignPage extends Component {
         handleValueChange={this.handleValueChange}
         handlePotionSelect={this.handlePotionSelect}
         handleDropDownClick={this.handleDropDownClick}
+        increaseByOne={this.increaseByOne}
+        decreaseByOne={this.decreaseByOne}
       />
     }
 

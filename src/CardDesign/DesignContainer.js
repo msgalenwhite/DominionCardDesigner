@@ -3,7 +3,7 @@ import React from 'react';
 import DropDown from '../components/DropDown'
 import TextInputField from '../components/TextInputField'
 import SubmitButton from '../components/SubmitButton'
-import CardDescriptionDesign from './CardDescriptionDesign'
+import DescriptionDesign from './DescriptionDesign'
 import CardImages from '../constants/CardImages'
 import UpAndDown from './UpAndDown'
 
@@ -27,11 +27,13 @@ const DesignContainer = props => {
         options={typeOptions}
         handleClick={props.handleDropDownClick}
       />
-      <CardDescriptionDesign
+      <DescriptionDesign
         cardActions={props.cardData['cardActions']}
         cardDraws={props.cardData['cardDraws']}
         cardBuys={props.cardData['cardBuys']}
         onChange={props.handleValueChange}
+        increaseByOne={props.increaseByOne}
+        decreaseByOne={props.decreaseByOne}
       />
       <div className='textInput'>
         <h6 className="error">{props.errorMessage}</h6>
@@ -50,6 +52,8 @@ const DesignContainer = props => {
         value={props.cardData['cardCost']}
         name='cardCost'
         onChange={props.handleValueChange}
+        increaseByOne={props.increaseByOne}
+        decreaseByOne={props.decreaseByOne}
       />
       <TextInputField
         onChange={props.handleValueChange}
