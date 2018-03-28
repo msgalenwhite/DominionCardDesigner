@@ -27,8 +27,6 @@ $ npm start
 Navigate to `localhost:4567`.
 
 ## To-Do:
-CHANGES TO DESIGN CONTAINER:
-  - functions to make up and down buttons change values
 
 CHANGES TO SCSS:
   - For Card display:

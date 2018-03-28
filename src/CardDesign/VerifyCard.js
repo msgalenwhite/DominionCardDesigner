@@ -25,18 +25,15 @@ const VerifyCard = (props) => {
           value={props.cardData.extraInfo}
           name="extraInfo"
           label="Add a Note:"
-          key="extraInfo"
-        />
+          key="extraInfo" />
       </div>
       <div className="verifyButtons">
         <div onClick={props.editCard}>
           <input
             className='button'
             type="button"
-            value="Go Back"
-          />
+            value="Go Back" />
         </div>
-
         <div onClick={props.addToJSON}>
           <Link to='/cardapp/yourdeck'>
             <SubmitButton/>

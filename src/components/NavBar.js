@@ -10,12 +10,9 @@ const NavBar = props => {
 
   let deckIcon =
   <div className="deck">
-    <div className="rect rect3">
-    </div>
-    <div className="rect rect2">
-    </div>
-    <div className="rect rect1">
-    </div>
+    <div className="rect rect3"></div>
+    <div className="rect rect2"></div>
+    <div className="rect rect1"></div>
   </div>
 
   return(
@@ -26,23 +23,20 @@ const NavBar = props => {
           destination='/cardapp/yourdeck'
           labelClass='navButtonLabelLeft'
           labelText='View Your Deck'
-          icon={deckIcon}
-        />
+          icon={deckIcon} />
 
         <input
           className='navButton button'
           type='button'
           onClick={browserHistory.goBack}
-          value='Back'
-        />
+          value='Back' />
 
         <NavButton
           className='navButton'
           destination='/cardapp/designer'
           labelClass='navButtonLabelRight'
           labelText='Design New Card'
-          icon={cardIcon}
-        />
+          icon={cardIcon} />
       </div>
 
       {props.children}

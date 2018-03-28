@@ -16,8 +16,7 @@ const DesignContainer = props => {
   return(
     <form
       className={props.className}
-      onSubmit={props.handleFormSubmit}
-    >
+      onSubmit={props.handleFormSubmit} >
       <div className="genericError">
         {props.cardData.genericError}
       </div>
@@ -25,16 +24,14 @@ const DesignContainer = props => {
         className="typeDropDown"
         label="What type of card would you like?"
         options={typeOptions}
-        handleClick={props.handleDropDownClick}
-      />
+        handleClick={props.handleDropDownClick} />
       <DescriptionDesign
         cardActions={props.cardData['cardActions']}
         cardDraws={props.cardData['cardDraws']}
         cardBuys={props.cardData['cardBuys']}
         onChange={props.handleValueChange}
         increaseByOne={props.increaseByOne}
-        decreaseByOne={props.decreaseByOne}
-      />
+        decreaseByOne={props.decreaseByOne} />
       <div className='textInput'>
         <h6 className="error">{props.errorMessage}</h6>
         <label className='cardText'>
@@ -42,8 +39,7 @@ const DesignContainer = props => {
           <textarea
             className={props.name}
             value={props.cardData['cardText']}
-            onChange={props.handleValueChange}
-          />
+            onChange={props.handleValueChange} />
         </label>
       </div>
       <UpAndDown
@@ -53,16 +49,14 @@ const DesignContainer = props => {
         name='cardCost'
         onChange={props.handleValueChange}
         increaseByOne={props.increaseByOne}
-        decreaseByOne={props.decreaseByOne}
-      />
+        decreaseByOne={props.decreaseByOne} />
       <TextInputField
         onChange={props.handleValueChange}
         value={props.cardData['cardImageUrl']}
         name='cardImageUrl'
         label='Image Url: '
         key='cardImageUrl'
-        inputType='text'
-      />
+        inputType='text' />
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>
@@ -71,16 +65,14 @@ const DesignContainer = props => {
             id='potionChoice1'
             name='potion'
             value='yes'
-            onChange={props.handlePotionSelect}
-          />
+            onChange={props.handlePotionSelect} />
           <label htmlFor='potionChoice1'>Yes</label>
           <input
             type='radio'
             id='potionChoice2'
             name='potion'
             value='no'
-            onChange={props.handlePotionSelect}
-          />
+            onChange={props.handlePotionSelect} />
           <label htmlFor='potionChoice2'>No</label>
         </div>
       </div>

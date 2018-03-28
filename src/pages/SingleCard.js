@@ -56,8 +56,7 @@ class SingleCardPage extends Component {
             cardImageUrl={this.state.cardImageUrl}
             potions={this.state.potions}
             type={this.state.type}
-            id={this.state.id}
-          />
+            id={this.state.id} />
         </span>
 
       cardNotes =

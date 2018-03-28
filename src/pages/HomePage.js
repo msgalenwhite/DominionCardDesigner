@@ -97,13 +97,10 @@ class HomePage extends Component {
           handleChange={this.handleChange}
           firstName={this.state.firstName}
           lastName={this.state.lastName}
-          onSubmit={this.handleSubmit}
-        />
+          onSubmit={this.handleSubmit} />
     } else {
       renderedComponent =
-        <WelcomeContainer
-          userName={this.state.formattedName}
-        />
+        <WelcomeContainer userName={this.state.formattedName}/>
     }
 
     return(

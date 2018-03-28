@@ -210,16 +210,14 @@ class CardDesignPage extends Component {
           cardImageUrl={image}
           potions={this.state.potions}
           type={this.state.type}
-          id={this.state.id}
-        />
+          id={this.state.id} />
       </span>
     } else if (this.state.submitted === false) {
       previewCard =
       <img
         className="spaceFillerPic"
         src="https://i.imgur.com/i110dBO.png"
-        alt="space-filler picture"
-      />
+        alt="space-filler picture" />
     }
 
     //when the user has submitted a card, show the Verify page rather than the form
@@ -230,8 +228,7 @@ class CardDesignPage extends Component {
         cardData={this.state}
         addToJSON={this.handleAddToJSON}
         handleChange={this.handleValueChange}
-        editCard={this.editCard}
-      />
+        editCard={this.editCard} />
     } else {
       renderedComponent =
       <DesignContainer
@@ -242,8 +239,7 @@ class CardDesignPage extends Component {
         handlePotionSelect={this.handlePotionSelect}
         handleDropDownClick={this.handleDropDownClick}
         increaseByOne={this.increaseByOne}
-        decreaseByOne={this.decreaseByOne}
-      />
+        decreaseByOne={this.decreaseByOne} />
     }
 
     return(
@@ -251,13 +247,11 @@ class CardDesignPage extends Component {
         <h1 className="pageTitle">Design a Card</h1>
         <div className='row'>
           <div
-            className='column small-12 medium-4 large-3 previewCard'
-          >
+            className='column small-12 medium-4 large-3 previewCard' >
             {previewCard}
           </div>
           <div
-            className='column small-12 medium-8 large-9'
-          >
+            className='column small-12 medium-8 large-9'>
             {renderedComponent}
           </div>
         </div>

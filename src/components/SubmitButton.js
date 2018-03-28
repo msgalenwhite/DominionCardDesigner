@@ -6,8 +6,7 @@ const SubmitButton = props => {
     <input
       className='submitButton button'
       type='submit'
-      value='Submit'
-    />
+      value='Submit' />
   )
 }
 

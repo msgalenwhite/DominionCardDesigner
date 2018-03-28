@@ -30,21 +30,18 @@ const Card = (props) => {
       <div >
         <img
           className={tags.pic}
-          src = {props.cardImageUrl}
-        />
+          src = {props.cardImageUrl} />
       </div>
       <CardDescription
         divTag={tags.text}
-        content={props.cardText}
-      />
+        content={props.cardText} />
       <div className={tags.cost} >
         {props.cardCost}
       </div>
       {potions}
       <img
         className = {props.type}
-        src={typePic}
-      />
+        src={typePic} />
     </div>
   )
 }

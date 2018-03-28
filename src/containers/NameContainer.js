@@ -17,20 +17,17 @@ const NameContainer = props => {
           className="titleDropDown"
           handleClick={props.handleTitleClick}
           options={titleOptions}
-          label="Title: "
-        />
+          label="Title: " />
         <TextInputField
           label="First Name:"
           value={props.firstName}
           onChange={props.handleChange}
-          name="firstName"
-        />
+          name="firstName" />
         <TextInputField
           label="Last Name:"
           value={props.lastName}
           onChange={props.handleChange}
-          name="lastName"
-        />
+          name="lastName" />
         <SubmitButton />
       </form>
     </div>

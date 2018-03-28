@@ -41,8 +41,7 @@ class ViewDeckPage extends Component {
         <h3 className='pageTitle'>Your Current Deck</h3>
         <div className='deckPageDiv'>
           <Deck
-            cardData={this.state.deck}
-          />
+            cardData={this.state.deck} />
         </div>
       </div>
     )

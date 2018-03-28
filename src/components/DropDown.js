@@ -12,8 +12,7 @@ const DropDown = props => {
     return (
       <option
         key={`${props.className} ${value}`}
-        value={value}
-      >
+        value={value} >
         {value}
       </option>
     )
@@ -24,8 +23,7 @@ const DropDown = props => {
       <label>{props.label}</label>
       <select
         onChange={handleClick}
-        className="dropDownOption"
-      >
+        className="dropDownOption" >
         <option defaultValue=""></option>
         {optionTags}
       </select>

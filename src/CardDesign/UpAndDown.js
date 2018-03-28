@@ -18,20 +18,17 @@ const UpAndDown = props => {
       <div className='flexboxDiv'>
         <i
           className="fa fa-arrow-circle-left"
-          onClick={downOne}
-        >
+          onClick={downOne} >
         </i>
         <input
           type='text'
           id={props.name}
           className={props.name}
           value={props.value}
-          onChange={props.onChange}
-        />
+          onChange={props.onChange} />
         <i
           className="fa fa-arrow-circle-right"
-          onClick={upOne}
-        >
+          onClick={upOne} >
         </i>
       </div>
     </div>
