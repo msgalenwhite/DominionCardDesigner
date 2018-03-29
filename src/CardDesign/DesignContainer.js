@@ -29,18 +29,9 @@ const DesignContainer = props => {
         cardActions={props.cardData['cardActions']}
         cardDraws={props.cardData['cardDraws']}
         cardBuys={props.cardData['cardBuys']}
+        cardText={props.cardData['cardText']}
         onChange={props.handleValueChange}
         changeAmount={props.changeAmount} />
-      <div className='textInput'>
-        <h6 className="error">{props.errorMessage}</h6>
-        <label className='cardText'>
-          Additional CardText:
-          <textarea
-            className={props.name}
-            value={props.cardData['cardText']}
-            onChange={props.handleValueChange} />
-        </label>
-      </div>
       <UpAndDown
         key='cardCost'
         label='Cost:'

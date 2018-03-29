@@ -27,24 +27,21 @@ $ npm start
 Navigate to `localhost:4567`.
 
 ## To-Do:
+1. Have Actions, Card, Buys, Text show up on card (Card.js)
+2. Have "handle Submit" function only check that SOMETHING from the description section has been filled out, not necessarily everything, and then everything else
+3. Edit json to properly store all of the data that I am passing in as a description
+4. SingleCardPage should include:
+  1. picture of the card
+  2. heading with the name of the card
+  3. div with the card's notes
+  4. button to edit the card
 
-LIMITS ON UP AND DOWN -
-  - go from -5 to 10
-  - limit cost to 2 digits
-    - does it look ok if the first digit isn't 1?
+CSS CONCERNS
+1. The textarea in DescriptionDesign is weirdly aligned with its label.  Should labels be above sections instead of next to them?  That's something I could change in TextInputField as well.
+2. Should I change the display of a card into percentage instead of pixels, so the card would be scaleable?
+3. SingleCardPage has no styling.
+4. On Verify Page: make sure 'go back' and 'submit' are on the same line
 
-
-CHANGES TO SCSS:
-  - For Card display:
-    - Change px to %
-  - Fix spacing in Design Container
-
-CHANGES TO DECK CONTAINER:
-X- Clicking on a single card will take you to its page
-    - Card's page will have a link to edit it
-
-CHANGES TO VERIFY PAGE
-  - Make sure "submit" and "go back" buttons are on the same line
 
 NEW THINGS TO LEAN:
   - HOW TO TEST REACT

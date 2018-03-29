@@ -16,19 +16,31 @@ const DescriptionDesign = props => {
     let value = props[name]
 
     return (
-      <UpAndDown
-        key={label}
-        label={label}
-        value={value}
-        name={name}
-        onChange={props.onChange}
-        changeAmount={props.changeAmount} />
+        <UpAndDown
+          key={label}
+          label={label}
+          value={value}
+          name={name}
+          onChange={props.onChange}
+          changeAmount={props.changeAmount} />
     )
   })
 
   return(
-    <div className='upAndDownGroup'>
-      {upAndDownArray}
+    <div>
+      <div className='upAndDownGroup'>
+        {upAndDownArray}
+      </div>
+      <div className='textInput'>
+        <h6 className="error">{props.errorMessage}</h6>
+        <label className='cardText'>
+          Additional CardText:
+        </label>
+        <textarea
+          className='cardText'
+          value={props.cardText}
+          onChange={props.onChange} />
+      </div>
     </div>
   )
 }
