@@ -4,12 +4,14 @@ import TextInputField from '../components/TextInputField'
 
 const UpAndDown = props => {
   let upOne = () => {
-    props.increaseByOne(props.name)
+    props.changeAmount(props.name, 1)
   }
 
   let downOne = () => {
-    props.decreaseByOne(props.name)
+    props.changeAmount(props.name, -1)
   }
+
+  let className = `${props.name} upDownNum`
 
   return(
     <div className="upAndDown">
@@ -20,12 +22,12 @@ const UpAndDown = props => {
           className="fa fa-arrow-circle-left"
           onClick={downOne} >
         </i>
-        <input
-          type='text'
+        <span
           id={props.name}
-          className={props.name}
-          value={props.value}
-          onChange={props.onChange} />
+          className={className}
+          onChange={props.onChange} >
+          {props.value}
+        </span>
         <i
           className="fa fa-arrow-circle-right"
           onClick={upOne} >

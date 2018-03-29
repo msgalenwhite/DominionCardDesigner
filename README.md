@@ -28,6 +28,12 @@ Navigate to `localhost:4567`.
 
 ## To-Do:
 
+LIMITS ON UP AND DOWN -
+  - go from -5 to 10
+  - limit cost to 2 digits
+    - does it look ok if the first digit isn't 1?
+
+
 CHANGES TO SCSS:
   - For Card display:
     - Change px to %

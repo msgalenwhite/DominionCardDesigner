@@ -30,8 +30,7 @@ const DesignContainer = props => {
         cardDraws={props.cardData['cardDraws']}
         cardBuys={props.cardData['cardBuys']}
         onChange={props.handleValueChange}
-        increaseByOne={props.increaseByOne}
-        decreaseByOne={props.decreaseByOne} />
+        changeAmount={props.changeAmount} />
       <div className='textInput'>
         <h6 className="error">{props.errorMessage}</h6>
         <label className='cardText'>
@@ -48,8 +47,7 @@ const DesignContainer = props => {
         value={props.cardData['cardCost']}
         name='cardCost'
         onChange={props.handleValueChange}
-        increaseByOne={props.increaseByOne}
-        decreaseByOne={props.decreaseByOne} />
+        changeAmount={props.changeAmount} />
       <TextInputField
         onChange={props.handleValueChange}
         value={props.cardData['cardImageUrl']}

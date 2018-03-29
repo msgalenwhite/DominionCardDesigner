@@ -22,8 +22,7 @@ const DescriptionDesign = props => {
         value={value}
         name={name}
         onChange={props.onChange}
-        increaseByOne={props.increaseByOne}
-        decreaseByOne={props.decreaseByOne} />
+        changeAmount={props.changeAmount} />
     )
   })
 

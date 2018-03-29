@@ -29,8 +29,7 @@ class CardDesignPage extends Component {
     }
 
     this.handleValueChange = this.handleValueChange.bind(this);
-    this.increaseByOne = this.increaseByOne.bind(this)
-    this.decreaseByOne = this.decreaseByOne.bind(this)
+    this.changeAmount = this.changeAmount.bind(this)
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
     this.handlePotionSelect = this.handlePotionSelect.bind(this);
@@ -50,20 +49,16 @@ class CardDesignPage extends Component {
     })
   }
 
-  increaseByOne(target) {
-    let amount = parseInt(this.state[target]) + 1
+  changeAmount(target, changeAmount) {
+    //constraints for Up and Downs are set between -5 and 25
+    let currentAmount = parseInt(this.state[target])
+    let newAmount = currentAmount + changeAmount
 
-    this.setState({
-      [target]: amount
-    })
-  }
-
-  decreaseByOne(target) {
-    let amount = parseInt(this.state[target]) - 1
-
-    this.setState({
-      [target]: amount
-    })
+    if (-5 <= newAmount && newAmount <= 25) {
+      this.setState({
+        [target]: newAmount
+      })
+    }
   }
 
   handleFormSubmit(event) {
@@ -238,8 +233,7 @@ class CardDesignPage extends Component {
         handleValueChange={this.handleValueChange}
         handlePotionSelect={this.handlePotionSelect}
         handleDropDownClick={this.handleDropDownClick}
-        increaseByOne={this.increaseByOne}
-        decreaseByOne={this.decreaseByOne} />
+        changeAmount={this.changeAmount} />
     }
 
     return(
