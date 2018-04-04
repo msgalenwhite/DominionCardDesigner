@@ -24,7 +24,7 @@ const Card = (props) => {
   }
 
   let typePic = cardImages[props.type].url
-
+  
   return (
     <div className='cardDiv'>
       <div className={tags.title} >

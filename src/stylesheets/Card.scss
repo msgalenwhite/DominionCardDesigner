@@ -46,6 +46,8 @@
 .displayCardImage {
   position: absolute;
 }
+//foundation is setting a max-width (100%) on the image that is occasionally making it not appear
+
 .actiondisplayCardImage, .victorydisplayCardImage {
   top: 34px;
   left: 12px;

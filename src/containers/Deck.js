@@ -11,6 +11,9 @@ const Deck = props => {
         <Link to={`/cardapp/singlecard/${indivCard.id}`}>
           <Card
             cardName={indivCard.cardName}
+            cardActions={indivCard.cardActions}
+            cardBuys={indivCard.cardBuys}
+            cardDraw={indivCard.cardDraws}
             cardText={indivCard.cardText}
             cardCost={indivCard.cardCost}
             cardImageUrl={indivCard.cardImageUrl}
