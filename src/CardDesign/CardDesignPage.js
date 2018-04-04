@@ -35,6 +35,7 @@ class CardDesignPage extends Component {
     this.handlePotionSelect = this.handlePotionSelect.bind(this);
     this.formIsComplete = this.formIsComplete.bind(this);
     this.handleDropDownClick = this.handleDropDownClick.bind(this);
+    this.generateFormPayload = this.generateFormPayload.bind(this)
 
     this.editCard = this.editCard.bind(this);
     this.handleAddToJSON = this.handleAddToJSON.bind(this);
@@ -64,18 +65,7 @@ class CardDesignPage extends Component {
   handleFormSubmit(event) {
     event.preventDefault();
 
-    let formPayload = {
-      cardName: this.state.cardName,
-      cardActions: this.state.cardActions,
-      cardDraws: this.state.cardDraws,
-      cardBuys: this.state.cardBuys,
-      cardText: this.state.cardText,
-      cardCost: this.state.cardCost,
-      cardImageUrl: this.state.cardImageUrl,
-      potions: this.state.potions,
-      type: this.state.type,
-      extraInfo: this.state.extraInfo
-    }
+    let formPayload = this.generateFormPayload()
 
     if (this.formIsComplete(formPayload)) {
 
@@ -97,9 +87,15 @@ class CardDesignPage extends Component {
       let key = miniArray[0]
       let value = miniArray[1]
 
-      if (key !== "extraInfo" && value === "") {
-        formIsFull = false;
-        //this is where I could set a more specific error
+      let requiredFields = [
+        "cardName",
+        "cardCost",
+        "cardImageUrl",
+        "postions"
+      ]
+
+      if (requiredFields.includes(key) && value === "") {
+        formIsFull = false
       }
     })
     return formIsFull
@@ -155,19 +151,25 @@ class CardDesignPage extends Component {
     })
   }
 
+  generateFormPayload() {
+    return (
+      {
+        cardName: this.state.cardName,
+        cardActions: this.state.cardActions,
+        cardDraws: this.state.cardDraws,
+        cardBuys: this.state.cardBuys,
+        cardText: this.state.cardText,
+        cardCost: this.state.cardCost,
+        cardImageUrl: this.state.cardImageUrl,
+        potions: this.state.potions,
+        type: this.state.type,
+        extraInfo: this.state.extraInfo
+      }
+    )
+  }
+
   handleAddToJSON(){
-    let formPayload = {
-      cardName: this.state.cardName,
-      cardActions: this.state.cardActions,
-      cardDraws: this.state.cardDraws,
-      cardBuys: this.state.cardBuys,
-      cardText: this.state.cardText,
-      cardCost: this.state.cardCost,
-      cardImageUrl: this.state.cardImageUrl,
-      potions: this.state.potions,
-      type: this.state.type,
-      extraInfo: this.state.extraInfo
-    }
+    let formPayload = this.generateFormPayload()
 
     this.handleClearForm()
     this.props.route.addToJSON(formPayload)
@@ -180,10 +182,9 @@ class CardDesignPage extends Component {
   }
 
   render(){
-    console.log(this.state)
-
     let previewCard;
     let image;
+
     //if they haven't chosen an image yet, use a test image.
     if (this.state.cardImageUrl === ""){
       image = "https://i.imgur.com/i110dBO.png"
@@ -193,6 +194,7 @@ class CardDesignPage extends Component {
 
     //if they haven't chosen a type yet, we can't show any card
     if (this.state.type !== "") {
+
       previewCard =
       <span className="verifyCard">
         <Card

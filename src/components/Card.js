@@ -3,11 +3,13 @@ import cardImages from '../constants/CardImages'
 import CardDescription from './CardDescription'
 
 const Card = (props) => {
+  //problem with 'url of undefined?'
+
   let tags = {
     title: 'cardTitleDiv',
     pic: 'displayCardImage',
-    text: 'cardTextDiv',
     cost: 'displayCost',
+    description: 'cardTextDiv',
     potions: 'potionsPic'
   }
 
@@ -20,6 +22,7 @@ const Card = (props) => {
     potions = <img className={tags.potions}
     src='http://wiki.dominionstrategy.com/images/7/7a/Potion.png' />
   }
+
   let typePic = cardImages[props.type].url
 
   return (
@@ -33,8 +36,11 @@ const Card = (props) => {
           src = {props.cardImageUrl} />
       </div>
       <CardDescription
-        divTag={tags.text}
-        content={props.cardText} />
+        divTag={tags.description}
+        actions={props.cardActions}
+        draws={props.cardDraws}
+        buys={props.cardBuys}
+        text={props.cardText} />
       <div className={tags.cost} >
         {props.cardCost}
       </div>

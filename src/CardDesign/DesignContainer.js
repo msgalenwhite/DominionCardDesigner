@@ -20,6 +20,14 @@ const DesignContainer = props => {
       <div className="genericError">
         {props.cardData.genericError}
       </div>
+      <TextInputField
+        onChange={props.handleValueChange}
+        value={props.cardData['cardName']}
+        name='cardName'
+        label='What would you like to name your card?'
+        key='cardName'
+        inputType='text' />
+        <br/>
       <DropDown
         className="typeDropDown"
         label="What type of card would you like?"
