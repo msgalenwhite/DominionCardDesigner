@@ -36,7 +36,8 @@ const DescriptionDesign = props => {
         <label className='cardText'>
           Additional CardText:
         </label>
-        <textarea
+        <input
+          type='text'
           className='cardText'
           value={props.cardText}
           onChange={props.onChange} />
