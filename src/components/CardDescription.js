@@ -28,14 +28,17 @@ GOALS:
 
   let descriptionComponents = labels.map((infoObject) => {
     let number = infoObject.value
+    let label = infoObject.label
 
-    if (number === 1 || number === -1) {
+    if (-1 < number && number < 1) {
+      label += "s"
+    }
+
+    if (number !== 0) {
       return (
-        <p className='descriptionPiece'>+{number} {infoObject.label}</p>
-      )
-    } else if (number !== 0) {
-      return (
-        <p className='descriptionPiece'>+{number} {infoObject.label}s</p>
+        <p className='descriptionPiece' key={label}>
+          +{number} {label}
+        </p>
       )
     }
   })
