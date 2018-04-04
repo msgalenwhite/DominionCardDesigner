@@ -13,7 +13,7 @@ const Deck = props => {
             cardName={indivCard.cardName}
             cardActions={indivCard.cardActions}
             cardBuys={indivCard.cardBuys}
-            cardDraw={indivCard.cardDraws}
+            cardDraws={indivCard.cardDraws}
             cardText={indivCard.cardText}
             cardCost={indivCard.cardCost}
             cardImageUrl={indivCard.cardImageUrl}
