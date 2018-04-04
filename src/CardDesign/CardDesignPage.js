@@ -239,7 +239,7 @@ class CardDesignPage extends Component {
     }
 
     return(
-      <div className='page'>
+      <div>
         <h1 className="pageTitle">Design a Card</h1>
         <div className='row'>
           <div

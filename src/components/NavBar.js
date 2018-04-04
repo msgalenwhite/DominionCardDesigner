@@ -38,8 +38,9 @@ const NavBar = props => {
           labelText='Design New Card'
           icon={cardIcon} />
       </div>
-
-      {props.children}
+      <div className='page'>
+        {props.children}
+      </div>
     </div>
   )
 }

@@ -37,7 +37,7 @@ class ViewDeckPage extends Component {
   render() {
 
     return(
-      <div className='page deckPage'>
+      <div className='deckPage'>
         <h3 className='pageTitle'>Your Current Deck</h3>
         <div className='deckPageDiv'>
           <Deck

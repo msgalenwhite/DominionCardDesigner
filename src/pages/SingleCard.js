@@ -68,7 +68,7 @@ class SingleCardPage extends Component {
     }
 
     return(
-      <div className='page'>
+      <div>
         {singleCard}
         {cardNotes}
       </div>
