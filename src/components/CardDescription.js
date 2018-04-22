@@ -28,14 +28,20 @@ GOALS:
 
   let descriptionComponents = labels.map((infoObject) => {
     let number = infoObject.value
+    let text = infoObject.label
+    let sign;
 
-    if (number === 1 || number === -1) {
+    if (number !== 0) {
+      if (number > 1 || number < -1) {
+        text += "s"
+      }
+
+      if (number >= 1) {
+        sign = "+"
+      }
+
       return(
-        <p key={infoObject.label} className='descriptionPiece'>+{number} {infoObject.label}</p>
-      )
-    } else if (number !== 0) {
-      return (
-        <p key={infoObject.label} className='descriptionPiece'>+{number} {infoObject.label}s</p>
+        <p key={infoObject.label} className='descriptionPiece'>{sign}{number} {text}</p>
       )
     }
   })

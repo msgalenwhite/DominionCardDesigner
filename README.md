@@ -27,10 +27,10 @@ $ npm start
 Navigate to `localhost:4567`.
 
 ## To-Do:
-1. Have Actions, Card, Buys, Text show up on card (Card.js)
-2. Have "handle Submit" function only check that SOMETHING from the description section has been filled out, not necessarily everything, and then everything else
-3. Edit json to properly store all of the data that I am passing in as a description
-4. SingleCardPage should include:
+XXX 1. Have Actions, Card, Buys, Text show up on card (Card.js)
+XXX 2. Have "handle Submit" function only check that SOMETHING from the description section has been filled out, not necessarily everything, and then everything else
+XXX 3. Edit json to properly store all of the data that I am passing in as a description
+4. SingleCardPage should include: = FOUNDATION ISSUES
   1. picture of the card
   2. heading with the name of the card
   3. div with the card's notes
@@ -44,7 +44,18 @@ CSS CONCERNS
 
 
 NEW THINGS TO LEAN:
-  - HOW TO TEST REACT
+  - HOW TO TEST REACT - I added dependencies to package.json, but haven't done anything else
 
 Cool things for the future:
 - save miniature decks to use in conjunction with each other
+- vote up and down on cards by yourself and other people
+- have single card page show who has designed it
+
+
+issues with Foundation:
+- images on single card Page
+- color of cost on cards (single card)
+- shape of buttons
+- design a card/see deck buttons merged
+
+fix card amounts when negative they still have a "+"

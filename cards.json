@@ -38,6 +38,19 @@
       "type": "reaction",
       "extraInfo": "",
       "id": 3
+    },
+    {
+      "cardName": "Test Card",
+      "cardActions": 0,
+      "cardDraws": 2,
+      "cardBuys": 2,
+      "cardText": "This is an awesome card!",
+      "cardCost": 6,
+      "cardImageUrl": "https://i.pinimg.com/736x/1d/2c/f8/1d2cf8a3bbafbe1e527c55f538a624e5--baby-princess-little-princess.jpg",
+      "potions": true,
+      "type": "victoryAndTreasure",
+      "extraInfo": "This was a practice card.",
+      "id": 4
     }
   ]
 }

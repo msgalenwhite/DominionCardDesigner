@@ -47,7 +47,7 @@
   position: absolute;
 }
 //foundation is setting a max-width (100%) on the image that is occasionally making it not appear
-
+// Actually, on single card page it's width is 0px?
 .actiondisplayCardImage, .victorydisplayCardImage {
   top: 34px;
   left: 12px;
