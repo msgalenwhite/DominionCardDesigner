@@ -3,7 +3,6 @@ require "sinatra/reloader" if development?
 require "sinatra/json"
 require "json"
 require "pry" if development? || test?
-require "pg"
 
 set :bind, '0.0.0.0'  # bind to all interfaces
 
