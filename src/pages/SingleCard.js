@@ -29,6 +29,9 @@ class SingleCardPage extends Component {
       .then ( response => {
         this.setState({
           cardName: response.cardName,
+          cardActions: response.cardActions,
+          cardBuys: response.cardBuys,
+          cardDraws: response.cardDraws,
           cardText: response.cardText,
           cardCost: response.cardCost,
           cardImageUrl: response.cardImageUrl,
@@ -51,6 +54,9 @@ class SingleCardPage extends Component {
         <span className='cardInDeck'>
           <Card
             cardName={this.state.cardName}
+            cardActions={this.state.cardActions}
+            cardBuys={this.state.cardBuys}
+            cardDraws={this.state.cardDraws}
             cardText={this.state.cardText}
             cardCost={this.state.cardCost}
             cardImageUrl={this.state.cardImageUrl}
@@ -60,7 +66,8 @@ class SingleCardPage extends Component {
         </span>
 
       cardNotes =
-        <div>
+        <div className='columns small-12 medium-8'>
+          <h3>Notes:</h3>
           <p>
             {this.state.extraInfo}
           </p>
@@ -69,8 +76,13 @@ class SingleCardPage extends Component {
 
     return(
       <div>
-        {singleCard}
-        {cardNotes}
+        <h1 className='pageTitle'>{this.state.cardName}</h1>
+        <div className='row'>
+          <div className='deckContainer columns small-12 medium-4'>
+            {singleCard}
+          </div>
+          {cardNotes}
+        </div>
       </div>
     )
   }
