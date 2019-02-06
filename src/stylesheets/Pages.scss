@@ -4,11 +4,9 @@ body {
 .page {
   border-radius: 3px;
   padding: 10px;
-  margin: 15px;
-  margin-top: 0px;
+  margin: 8px 15px;
   background: white;
   min-height: 440px;
-  // min-height: 100vh;
   min-width: 270px;
 }
 
@@ -20,4 +18,10 @@ body {
   text-align: center;
   color: $dark-blue;
   font-size: 35px;
+}
+.button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
 }
