@@ -1,29 +1,22 @@
-
+.cardDesignDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 300px;
+}
 .potionsSelection {
   text-align: center;
 }
-.designForm, .verifyForm {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  min-width: 200px;
-}
 .verifyButtons {
   display: inline-flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
-.verifyCard, .spaceFillerPic {
+.verifyCard .cardDiv, .spaceFillerPic {
   position: relative;
   margin: 10px;
   width: 200px;
-  min-width: 200px;
-  min-height: 250px;
-}
-
-.previewCard {
-  display: flex;
-  justify-content: space-around;
+  height: 250px;
 }
 .noteDescription {
   text-align: center;

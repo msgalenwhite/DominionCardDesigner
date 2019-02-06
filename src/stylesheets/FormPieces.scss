@@ -12,6 +12,15 @@ input[type='text'], .dropDownOption, textarea {
   font-size: .9em;
 }
 
+textarea {
+  display: block;
+  width: 300px;
+  height: 200px;
+  text-align: left;
+  padding: 10px;
+  margin: 10px auto;
+}
+
 .button {
   background-color: $blue;
   color: white;

@@ -7,7 +7,7 @@ import DescriptionDesign from './DescriptionDesign'
 import CardImages from '../constants/CardImages'
 import UpAndDown from './UpAndDown'
 
-const DesignContainer = props => {
+const DesignForm = props => {
 
   let typeOptions = Object.values(CardImages).map((valueObject) => {
     return valueObject.label
@@ -15,7 +15,7 @@ const DesignContainer = props => {
 
   return(
     <form
-      className={props.className}
+      className='designForm'
       onSubmit={props.handleFormSubmit} >
       <div className="genericError">
         {props.cardData.genericError}
@@ -26,7 +26,7 @@ const DesignContainer = props => {
         name='cardName'
         label='What would you like to name your card?'
         key='cardName'
-        inputType='text' />
+        type='text' />
         <br/>
       <DropDown
         className="typeDropDown"
@@ -53,7 +53,7 @@ const DesignContainer = props => {
         name='cardImageUrl'
         label='Image Url: '
         key='cardImageUrl'
-        inputType='text' />
+        type='text' />
       <div className="potionsSelection">
         <p>Require Potions?</p>
         <div>
@@ -79,4 +79,4 @@ const DesignContainer = props => {
 
 }
 
-export default DesignContainer
+export default DesignForm

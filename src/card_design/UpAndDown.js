@@ -1,7 +1,5 @@
 import React from 'react'
 
-import TextInputField from '../components/TextInputField'
-
 const UpAndDown = props => {
   let upOne = () => {
     props.changeAmount(props.name, 1)
