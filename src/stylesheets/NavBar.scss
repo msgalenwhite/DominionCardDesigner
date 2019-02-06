@@ -22,26 +22,22 @@ Buttons and Labels
   position: relative;
 }
 
-.navButtonLabelLeft, .navButtonLabelRight, #navButton {
-  font-size: 12px;
+.navButtonLabelLeft, .navButtonLabelRight {
+  font-size: .9em;
   color: white;
   vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  transform: translate(0, -50%)
 }
 
 .navButtonLabelLeft {
-  position: absolute;
   left: 25px;
-  top: 50%;
-  width: 100px;
-  transform: translate(0, -50%)
 }
 
 .navButtonLabelRight {
-  position: absolute;
   right: 25px;
-  top: 50%;
-  width: 100px;
-  transform: translate(0, -50%)
 }
 
 
