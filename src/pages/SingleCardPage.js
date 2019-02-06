@@ -66,7 +66,7 @@ class SingleCardPage extends Component {
         </span>
 
       cardNotes =
-        <div className='columns small-12 medium-8'>
+        <div>
           <h3>Notes:</h3>
           <p>
             {this.state.extraInfo}
@@ -77,10 +77,8 @@ class SingleCardPage extends Component {
     return(
       <div>
         <h1 className='pageTitle'>{this.state.cardName}</h1>
-        <div className='row'>
-          <div className='deckContainer columns small-12 medium-4'>
-            {singleCard}
-          </div>
+        <div className='singleCardDisplay'>
+          {singleCard}
           {cardNotes}
         </div>
       </div>
