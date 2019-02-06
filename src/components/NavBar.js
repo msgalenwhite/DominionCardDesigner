@@ -25,12 +25,6 @@ const NavBar = props => {
           labelText='View Your Deck'
           icon={deckIcon} />
 
-        <input
-          className='navButton button'
-          type='button'
-          onClick={browserHistory.goBack}
-          value='Back' />
-
         <NavButton
           className='navButton'
           destination='/cardapp/designer'
@@ -38,8 +32,18 @@ const NavBar = props => {
           labelText='Design New Card'
           icon={cardIcon} />
       </div>
+
       <div className='page'>
         {props.children}
+      </div>
+
+      <div className='footer'>
+        <input
+          id='navButton'
+          className='button'
+          type='button'
+          onClick={browserHistory.goBack}
+          value='Back' />
       </div>
     </div>
   )

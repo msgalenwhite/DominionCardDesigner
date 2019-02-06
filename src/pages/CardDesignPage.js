@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
-import DesignContainer from './DesignContainer'
-import VerifyCard from './VerifyCard'
+import DesignForm from '../card_design/DesignForm'
+import VerifyCard from '../card_design/VerifyCard'
 
 import ErrorMessages from '../constants/ErrorMessages'
 import CardImages from '../constants/CardImages'
@@ -64,15 +64,12 @@ class CardDesignPage extends Component {
 
   handleFormSubmit(event) {
     event.preventDefault();
-
     let formPayload = this.generateFormPayload()
 
     if (this.formIsComplete(formPayload)) {
-
       this.setState({
         submitted: true
       })
-
     } else {
       this.setState({
         genericError: ErrorMessages.generic
@@ -194,7 +191,6 @@ class CardDesignPage extends Component {
 
     //if they haven't chosen a type yet, we can't show any card
     if (this.state.type !== "") {
-
       previewCard =
       <span className="verifyCard">
         <Card
@@ -228,8 +224,7 @@ class CardDesignPage extends Component {
         editCard={this.editCard} />
     } else {
       renderedComponent =
-      <DesignContainer
-        className="designForm"
+      <DesignForm
         cardData={this.state}
         handleFormSubmit={this.handleFormSubmit}
         handleValueChange={this.handleValueChange}
@@ -241,15 +236,9 @@ class CardDesignPage extends Component {
     return(
       <div>
         <h1 className="pageTitle">Design a Card</h1>
-        <div className='row'>
-          <div
-            className='columns small-12 medium-4 large-3 previewCard' >
-            {previewCard}
-          </div>
-          <div
-            className='columns small-12 medium-8 large-9'>
-            {renderedComponent}
-          </div>
+        <div className='cardDesignDiv'>
+          {previewCard}
+          {renderedComponent}
         </div>
       </div>
     )

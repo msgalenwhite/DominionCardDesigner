@@ -6,33 +6,25 @@ import SubmitButton from '../components/SubmitButton'
 import TextInputField from '../components/TextInputField'
 
 const VerifyCard = (props) => {
-
-  // cardData={this.state}
-  // addToJSON={this.handleAddToJSON}
-  // handleChange={this.handleValueChange}
-  // editCard
-
   let handleEditClick = () => {
     props.editCard(props.cardData)
   }
 
   return(
-    <div>
-      <div className="verifyForm">
-        <h2 className='noteDescription'>Notes are optional, but can help you remember what makes this card special.</h2>
-        <TextInputField
-          onChange={props.handleChange}
-          value={props.cardData.extraInfo}
-          name="extraInfo"
-          label="Add a Note:"
-          key="extraInfo" />
-      </div>
+    <div className="verifyForm">
+      <p className='noteDescription'>Notes are optional, but can help you remember what makes this card special.</p>
+      <textarea
+        className='extraInfo'
+        onChange={props.handleChange}
+        value={props.cardData.extraInfo} >
+          {props.cardData.extraInfo}
+      </textarea>
       <div className="verifyButtons">
         <div onClick={props.editCard}>
           <input
             className='button'
             type="button"
-            value="Go Back" />
+            value="Make a Change" />
         </div>
         <div onClick={props.addToJSON}>
           <Link to='/cardapp/yourdeck'>

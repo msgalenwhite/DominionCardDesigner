@@ -19,11 +19,13 @@ const NameContainer = props => {
           options={titleOptions}
           label="Title: " />
         <TextInputField
+          type='text'
           label="First Name:"
           value={props.firstName}
           onChange={props.handleChange}
           name="firstName" />
         <TextInputField
+          type='text'
           label="Last Name:"
           value={props.lastName}
           onChange={props.handleChange}
