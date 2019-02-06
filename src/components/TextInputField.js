@@ -1,6 +1,7 @@
 import React from 'react'
 
 const TextInputField = props => {
+  let inputType = props.inputType ? props.inputType : 'text'
 
   return(
     <div className='textInput'>
@@ -8,7 +9,7 @@ const TextInputField = props => {
       <label className={props.name}>
         {props.label}
         <input
-          type={props.inputType}
+          type={inputType}
           className={props.name}
           value={props.value}
           onChange={props.onChange} />

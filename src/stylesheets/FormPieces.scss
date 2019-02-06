@@ -3,13 +3,13 @@
   font-style: italic;
 }
 
-.dropDownOption {
+input[type='text'], .dropDownOption, textarea {
   margin-left: 10px;
   background-color: $lighter-blue;
-}
-
-input[type='text'], textarea {
-  background-color: $lighter-blue;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: .9em;
 }
 
 .button {
