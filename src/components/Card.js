@@ -3,8 +3,6 @@ import cardImages from '../constants/CardImages'
 import CardDescription from './CardDescription'
 
 const Card = (props) => {
-  //problem with 'url of undefined?'
-
   let tags = {
     title: 'cardTitleDiv',
     pic: 'displayCardImage',
@@ -24,7 +22,7 @@ const Card = (props) => {
   }
 
   let typePic = cardImages[props.type].url
-  
+
   return (
     <div className='cardDiv'>
       <div className={tags.title} >

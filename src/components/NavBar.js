@@ -6,14 +6,14 @@ import NavButton from './NavButton'
 const NavBar = props => {
 
   let cardIcon =
-  <div className="rect card"></div>
+    <div className="rect card"></div>
 
   let deckIcon =
-  <div className="deck">
-    <div className="rect rect3"></div>
-    <div className="rect rect2"></div>
-    <div className="rect rect1"></div>
-  </div>
+    <div className="deck">
+      <div className="rect rect3"></div>
+      <div className="rect rect2"></div>
+      <div className="rect rect1"></div>
+    </div>
 
   return(
     <div>

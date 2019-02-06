@@ -24,27 +24,13 @@ $ npm install
 $ npm start
 ```
 
-Navigate to `localhost:4567`.
+Navigate to `localhost:4567`
 
-## To-Do:
-SingleCardPage should include: = FOUNDATION ISSUES
-  x1. picture of the card
-  x2. heading with the name of the card
-  x3. div with the card's notes
-  4. button to edit the card
+## Cool things for the future
 
-CSS CONCERNS
-1. The textarea in DescriptionDesign is weirdly aligned with its label.  Should labels be above sections instead of next to them?  That's something I could change in TextInputField as well.
-2. Should I change the display of a card into percentage instead of pixels, so the card would be scaleable?
-3. On Verify Page: make sure 'go back' and 'submit' are on the same line
-
-Cool things for the future:
+- SingleCardPage should have a button to edit the card
 - incorporate databases in order to persist cards
 - save miniature decks to use in conjunction with each other
 - vote up and down on cards by yourself and other people
 - have single card page show who has designed it
-
-Issues with Foundation:
-- color of cost on cards (single card)
-- shape of buttons
-- design a card/see deck buttons merged
+- change display of card to percentages rather than pixels so the final card is scaleable

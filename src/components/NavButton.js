@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router'
 
 const NavButton = props => {
-
   let label1;
   let label2;
 
