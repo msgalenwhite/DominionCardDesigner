@@ -3,8 +3,7 @@ import React from 'react'
 import UpAndDown from './UpAndDown'
 
 const DescriptionDesign = props => {
-
-  let portions = {
+  const portions = {
     cardActions: "Actions",
     cardDraws: "Cards",
     cardBuys: "Buys"

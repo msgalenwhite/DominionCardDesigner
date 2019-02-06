@@ -72,9 +72,7 @@ class HomePage extends Component {
       )
     })
 
-    let userName = `${capitalizedValues[2]} ${capitalizedValues[0]} ${capitalizedValues[1]}`
-
-    return userName
+    return `${capitalizedValues[2]} ${capitalizedValues[0]} ${capitalizedValues[1]}`
   }
 
   capitalize(string) {
@@ -86,8 +84,6 @@ class HomePage extends Component {
   }
 
   render() {
-    console.log(this.state)
-
     let renderedComponent;
     if (this.state.formattedName === ""){
       renderedComponent =

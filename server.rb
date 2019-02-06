@@ -15,10 +15,6 @@ Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
   also_reload file
 end
 
-# HOW TO CONNECT TO A DATABASE
-
-
-
 # HOW TO READ THE JSON FILE
 def load_deck
   JSON.parse(File.read('cards.json'))

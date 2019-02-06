@@ -51,7 +51,6 @@ class CardDesignPage extends Component {
   }
 
   changeAmount(target, changeAmount) {
-    //constraints for Up and Downs are set between -5 and 25
     let currentAmount = parseInt(this.state[target])
     let newAmount = currentAmount + changeAmount
 

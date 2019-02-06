@@ -14,7 +14,6 @@ const TextInputField = props => {
       </label>
     </div>
   )
-
 }
 
 export default TextInputField
